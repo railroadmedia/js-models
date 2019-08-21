@@ -1,23 +1,40 @@
-import { DateTime } from 'luxon';
-
 /** @class ContentModel */
 export class ContentModel {
     /**
      * Create a Content Model
      *
-     * @param {String} brand - The brand you wish to parse the ContentModel for
      * @param {Object} post - The post to bind to the class
      * */
-    constructor(brand, post){
+    constructor(post){
         this.post = post;
-        this.brand = brand;
     }
 
     /**
-     * @type {String} The published on date of the post
+     * @type {String|Number} The post database ID
+     */
+    get id(){
+        return this.post.id;
+    }
+
+    /**
+     * @type {String} The post slug
+     */
+    get slug(){
+        return this.post.slug;
+    }
+
+    /**
+     * @type {String} The brand that the content belongs to
+     */
+    get brand(){
+        return this.post.brand;
+    }
+
+    /**
+     * @type {String} The UTC published on date of the post
      */
     get publishedOn() {
-        return DateTime.fromSQL(this.post.published_on).toFormat('LLL d/yy');
+        return this.post.published_on || 'TBD';
     }
 
     /**
@@ -25,6 +42,74 @@ export class ContentModel {
      */
     get type() {
         return this.post.type.replace('bundle-', '').replace(/-/g, ' ');
+    }
+
+    /**
+     * @type {String} The published status of the content (draft, scheduled, published, archived, deleted)
+     */
+    get status() {
+        return this.post.status;
+    }
+
+    /**
+     * @type {Number|String} The base amount of XP the post gives
+     */
+    get xp() {
+        return this.post.xp || 0;
+    }
+
+    /**
+     * @type {Number|String} The bonus amount of XP the post gives
+     */
+    get bonusXp() {
+        return this.post.xp_bonus || 0;
+    }
+
+    /**
+     * @type {String} The URL to the post on the website
+     */
+    get webUrl() {
+        return this.post.url;
+    }
+
+    /**
+     * @type {Boolean} Whether or not the current user has started the content
+     */
+    get isStarted() {
+        return this.post.started === true;
+    }
+    set isStarted(value) {
+        this.post.started = value;
+    }
+
+    /**
+     * @type {Boolean} Whether or not the current user has added the content to their list
+     */
+    get isAddedToList() {
+        return this.post.is_added_to_primary_playlist;
+    }
+    set isAddedToList(value) {
+         this.post.is_added_to_primary_playlist = value;
+    }
+
+    /**
+     * @type {Boolean} Whether or not the current user has liked the post
+     */
+    get isLiked() {
+        return this.post.is_liked === true;
+    }
+    set isLiked(value){
+        this.post.is_liked = value;
+    }
+
+    /**
+     * @type {String|Number} How many likes the post has
+     */
+    get likeCount() {
+        return this.post.like_count;
+    }
+    set LikeCount(value) {
+        this.post.like_count = value;
     }
 
     /**
@@ -43,7 +128,7 @@ export class ContentModel {
      * Get all of a contents post fields by key
      *
      * @param {Object} key - The key of the property you wish to get
-     * @returns {Array} - An array of all the matching field values
+     * @returns {Array} An array of all the matching field values
      */
     getFieldMulti(key) {
         const postFields = this.post.fields.filter(field => field.key === key);
@@ -67,7 +152,7 @@ export class ContentModel {
      * Get all of a contents post fields by key
      *
      * @param {Object} key - The key of the property you wish to get
-     * @returns {Array} - An array of all the matching field values
+     * @returns {Array} An array of all the matching field values
      */
     getDataMulti(key) {
         const postData = this.post.data.filter(data => data.key === key);
@@ -78,7 +163,7 @@ export class ContentModel {
     /**
      * Get a string with all the instructor names
      *
-     * @returns {String} - A comma delimited string with all the instructors
+     * @returns {String} A comma delimited string with all the instructors
      */
     getInstructors() {
         const instructors = this.getFieldMulti('instructor');
@@ -95,22 +180,39 @@ export class ContentModel {
     }
 
     /**
-     * Parse the post duration in minutes rounded down
+     * Get the difficulty of the post
      *
-     * @returns {String} - The post duration in minutes
+     * @returns {String} The difficulty of the post
      */
-    getPostDurationInMins() {
+    getDifficulty(){
+        const difficulty = this.getField('difficulty');
+
+        return ContentModel.mapDifficulty(difficulty);
+    }
+
+    /**
+     * Parse the post duration in seconds, minutes, or hours
+     *
+     * @param {String} format = 'mins' the format to parse the duration as. Accepted Values: `secs`, `mins`, `hours`
+     * @returns {String} The post duration
+     */
+    getDuration(format = 'mins') {
         const video = this.getField('video');
 
         if (video !== 'TBD') {
             let duration = 0;
             const videoLength = video.fields.find(field => field.key === 'length_in_seconds');
+            const coefficients = {
+                secs: 1,
+                mins: 60,
+                hours: 3600,
+            };
 
             if (videoLength) {
-                duration = Math.round(videoLength.value / 60);
+                duration = Math.round(videoLength.value / coefficients[format]);
             }
 
-            return `${duration} mins`;
+            return `${duration} ${format}`;
         }
 
         return 'TBD';
@@ -119,7 +221,7 @@ export class ContentModel {
     /**
      * Get the posts thumbnail
      *
-     * @returns {String} - The url of the posts thumbnail
+     * @returns {String} The url of the posts thumbnail
      */
     getThumbnail() {
         const defaults = {
@@ -129,11 +231,11 @@ export class ContentModel {
         };
         let thumb = this.getData('thumbnail_url');
 
-        if (this.postType === 'learning-path' && this.brand === 'drumeo') {
+        if (this.type === 'learning-path' && this.brand === 'drumeo') {
             thumb = this.getData('background_image_url');
         }
 
-        if (this.postType === 'chord and scale' && this.brand === 'guitareo') {
+        if (this.type === 'chord and scale' && this.brand === 'guitareo') {
             thumb = this.getData('guitar_chord_image_url');
         }
 
@@ -141,18 +243,9 @@ export class ContentModel {
     }
 
     /**
-     * Get the posts episode number
-     *
-     * @returns {String} - The episode number prepended by 'Episode #'
-     */
-    getEpisodeNumber() {
-        return this.post.sort ? `Episode #${this.post.sort}` : 'TBD';
-    }
-
-    /**
      * Get the child lesson count of the post
      *
-     * @returns {String} - The lesson count appended by ' Lessons'
+     * @returns {String} The lesson count appended by ' Lessons'
      */
     getChildLessonCount() {
         return this.post.lesson_count ? `${this.post.lesson_count} Lessons` : 'TBD';
@@ -161,12 +254,9 @@ export class ContentModel {
     /**
      * Map the difficulty of a post to a predetermined string
      *
-     * @returns {String} - The difficulty string
+     * @returns {String} The difficulty string
      */
-    static mapDifficulty(post) {
-        const difficultyField = post.fields.find(field => field.key === 'difficulty');
-        const difficulty = difficultyField ? difficultyField.value : null;
-
+    static mapDifficulty(difficulty) {
         if (difficulty <= 3) {
             return `beginner ${difficulty}`;
         }
