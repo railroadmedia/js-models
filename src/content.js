@@ -193,7 +193,7 @@ export class ContentModel {
     /**
      * Parse the post duration in seconds, minutes, or hours
      *
-     * @param {String} format = 'mins' - the format to parse the duration as. Accepted Values: `secs`, `mins`, `hours`
+     * @param {String} format='mins' - the format to parse the duration as. Accepted Values: `secs`, `mins`, `hours`
      * @returns {String} The post duration
      */
     getDuration(format = 'mins') {
