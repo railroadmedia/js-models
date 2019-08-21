@@ -1,4 +1,4 @@
-# js-models - @musora/services
+# js-models - @musora/models
 Data models for all Musora back-end services
 
 [![Build Status](https://travis-ci.com/railroadmedia/js-models.png?branch=master)](https://travis-ci.com/railroadmedia/js-models)
