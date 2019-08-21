@@ -41,7 +41,7 @@ export class ContentModel {
      * @type {String} The content type of the post
      */
     get type() {
-        return this.post.type.replace('bundle-', '').replace(/-/g, ' ');
+        return this.post.type;
     }
 
     /**
@@ -83,6 +83,16 @@ export class ContentModel {
     }
 
     /**
+     * @type {Boolean} Whether or not the current user has completed the content
+     */
+    get isCompleted() {
+        return this.post.completed === true;
+    }
+    set isCompleted(value) {
+        this.post.completed = value;
+    }
+
+    /**
      * @type {Boolean} Whether or not the current user has added the content to their list
      */
     get isAddedToList() {
@@ -108,7 +118,7 @@ export class ContentModel {
     get likeCount() {
         return this.post.like_count;
     }
-    set LikeCount(value) {
+    set likeCount(value) {
         this.post.like_count = value;
     }
 
@@ -128,12 +138,12 @@ export class ContentModel {
      * Get all of a contents post fields by key
      *
      * @param {Object} key - The key of the property you wish to get
-     * @returns {Array} An array of all the matching field values
+     * @returns {Array|String} An array of all the matching field values, returns a string 'TBD' if no values match
      */
     getFieldMulti(key) {
         const postFields = this.post.fields.filter(field => field.key === key);
 
-        return postFields.length ? postFields.map(field => field.value) : ['TBD'];
+        return postFields.length ? postFields.map(field => field.value) : 'TBD';
     }
 
     /**
@@ -149,18 +159,6 @@ export class ContentModel {
     }
 
     /**
-     * Get all of a contents post fields by key
-     *
-     * @param {Object} key - The key of the property you wish to get
-     * @returns {Array} An array of all the matching field values
-     */
-    getDataMulti(key) {
-        const postData = this.post.data.filter(data => data.key === key);
-
-        return postData.length ? postData.map(datum => datum.value) : ['TBD'];
-    }
-
-    /**
      * Get a string with all the instructor names
      *
      * @returns {String} A comma delimited string with all the instructors
@@ -170,10 +168,15 @@ export class ContentModel {
 
         if(instructors.length){
             return instructors
-                .map(instructor => instructor.fields)  // Map only the fields
-                .filter(field => field.key === 'name') // Filter only the name field
-                .map(field => field.value)             // Map the field values
-                .join(', ');                           // Join them by a comma
+                // Get all the instructor fields
+                .map(instructor => instructor.fields
+                    // Find only the name field
+                    .find(field => field.key === 'name')
+                )
+                // Map the field values
+                .map(field => field.value)
+                // Join them with a comma
+                .join(', ');
         }
 
         return 'TBD';
