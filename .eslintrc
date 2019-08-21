@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb-base"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "indent": ["error", 4],
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "max-len": ["warn", 120],
+    "no-trailing-spaces": "off",
+    "camelcase": "off"
+  }
+}
