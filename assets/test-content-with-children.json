@@ -1,0 +1,385 @@
+{
+  "id": 231114,
+  "slug": "ceative-covers",
+  "type": "course",
+  "sort": 0,
+  "status": "published",
+  "language": "en-US",
+  "brand": "pianote",
+  "published_on": "2019-08-19 19:00:00",
+  "created_on": "2019-08-14 09:05:11",
+  "archived_on": null,
+  "parent_id": null,
+  "child_id": null,
+  "fields": [
+    {
+      "id": 292899,
+      "content_id": 231114,
+      "key": "title",
+      "value": "Creative Covers",
+      "type": "string",
+      "position": 1
+    },
+    {
+      "id": 292900,
+      "content_id": 231114,
+      "key": "difficulty",
+      "value": "3",
+      "type": "string",
+      "position": 1
+    },
+    {
+      "id": 293512,
+      "content_id": 231114,
+      "key": "xp",
+      "value": "500",
+      "type": "integer",
+      "position": 1
+    },
+    {
+      "id": 292901,
+      "content_id": 231114,
+      "key": "instructor",
+      "value": {
+        "id": 196994,
+        "slug": "jordan-leibel",
+        "type": "instructor",
+        "sort": 0,
+        "status": "published",
+        "language": "en-US",
+        "brand": "pianote",
+        "published_on": "2018-02-28 17:01:11",
+        "created_on": "2018-02-28 17:01:11",
+        "archived_on": null,
+        "parent_id": null,
+        "child_id": null,
+        "fields": [
+          {
+            "id": 203219,
+            "content_id": 196994,
+            "key": "name",
+            "value": "Jordan Leibel",
+            "type": "string",
+            "position": 1
+          }
+        ],
+        "data": [
+          {
+            "id": 40003,
+            "content_id": 196994,
+            "key": "head_shot_picture_url",
+            "value": "https:\/\/d2vyvo0tyx8ig5.cloudfront.net\/instructors\/jordanleibel.png",
+            "position": 1
+          },
+          {
+            "id": 40004,
+            "content_id": 196994,
+            "key": "biography",
+            "value": "I've worked as a composer for film, commercial, and theatre projects as well as a session musician and producer for recording projects. And now, I'm super excited to teach you a thing or two through Pianote!",
+            "position": 1
+          }
+        ],
+        "permissions": []
+      },
+      "type": "content",
+      "position": 1
+    }
+  ],
+  "data": [
+    {
+      "id": 103199,
+      "content_id": 231114,
+      "key": "thumbnail_url",
+      "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/231114-card-thumbnail-1566229943.jpg",
+      "position": 1
+    },
+    {
+      "id": 103200,
+      "content_id": 231114,
+      "key": "original_thumbnail_url",
+      "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/231114-card-thumbnail-maxres-1566229946.jpg",
+      "position": 1
+    },
+    {
+      "id": 103202,
+      "content_id": 231114,
+      "key": "description",
+      "value": "<p>Jordan is a master at making beautiful covers of classic songs. In this course he will walk you through his creative process to inspire you to create your own unique song covers. You will learn new ways to approach looking at chord progressions, chord modifications, dynamics and more. This course will provide you with a basic outline of each song as well as a chord chart but the goal isn't to teach you how to play each song, but rather find unique ways to approach making it your own. There are inspirations here for every skill level from beginner to advanced. <\/p>",
+      "position": 1
+    }
+  ],
+  "permissions": [],
+  "user_progress": {
+    "128762": []
+  },
+  "completed": false,
+  "started": false,
+  "progress_percent": 0,
+  "user_playlists": {
+    "128762": []
+  },
+  "is_added_to_primary_playlist": false,
+  "published_on_in_timezone": {
+    "date": "2019-08-19 12:00:00.000000",
+    "timezone_type": 3,
+    "timezone": "America\/Los_Angeles"
+  },
+  "url": "https:\/\/dev.pianote.com\/members\/courses\/ceative-covers\/231114",
+  "lesson_count": 7,
+  "current_lesson_index": 0,
+  "current_lesson": {
+    "id": 231384,
+    "slug": "introduction",
+    "type": "course-part",
+    "sort": 0,
+    "status": "published",
+    "language": "en-US",
+    "brand": "pianote",
+    "published_on": "2019-08-19 19:00:00",
+    "created_on": "2019-08-19 15:10:45",
+    "archived_on": null,
+    "parent_id": 231114,
+    "child_id": 231384,
+    "fields": [
+      {
+        "id": 293513,
+        "content_id": 231384,
+        "key": "title",
+        "value": "Introduction",
+        "type": "string",
+        "position": 1
+      },
+      {
+        "id": 293521,
+        "content_id": 231384,
+        "key": "xp",
+        "value": "150",
+        "type": "integer",
+        "position": 1
+      },
+      {
+        "id": 293520,
+        "content_id": 231384,
+        "key": "video",
+        "value": {
+          "id": 231077,
+          "slug": "vimeo-video-353625831",
+          "type": "vimeo-video",
+          "sort": 0,
+          "status": "published",
+          "language": "en-US",
+          "brand": "pianote",
+          "published_on": "2019-08-13 18:00:15",
+          "created_on": "2019-08-13 18:00:15",
+          "archived_on": null,
+          "parent_id": null,
+          "child_id": null,
+          "fields": [
+            {
+              "id": 292844,
+              "content_id": 231077,
+              "key": "vimeo_video_id",
+              "value": "353625831",
+              "type": "string",
+              "position": 1
+            },
+            {
+              "id": 292845,
+              "content_id": 231077,
+              "key": "length_in_seconds",
+              "value": "55",
+              "type": "integer",
+              "position": 1
+            }
+          ],
+          "data": [],
+          "permissions": []
+        },
+        "type": "content",
+        "position": 1
+      }
+    ],
+    "data": [
+      {
+        "id": 103185,
+        "content_id": 231384,
+        "key": "thumbnail_url",
+        "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/231384-card-thumbnail-1566227942.jpg",
+        "position": 1
+      },
+      {
+        "id": 103186,
+        "content_id": 231384,
+        "key": "original_thumbnail_url",
+        "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/231384-card-thumbnail-maxres-1566227945.jpg",
+        "position": 1
+      },
+      {
+        "id": 103201,
+        "content_id": 231384,
+        "key": "description",
+        "value": "<p>Jordan is a master at making beautiful covers of classic songs. In this course he will walk you through his creative process to inspire you to create your own unique song covers. You will learn new ways to approach looking at chord progressions, chord modifications, dynamics and more. This course will provide you with a basic outline of each song as well as a chord chart but the goal isn't to teach you how to play each song, but rather find unique ways to approach making it your own. There are inspirations here for every skill level from beginner to advanced. <\/p>",
+        "position": 1
+      }
+    ],
+    "permissions": [],
+    "child_ids": [
+      231384
+    ],
+    "position": 1,
+    "user_progress": {
+      "128762": []
+    },
+    "completed": false,
+    "started": false,
+    "progress_percent": 0,
+    "user_playlists": {
+      "128762": []
+    },
+    "is_added_to_primary_playlist": false,
+    "url": "https:\/\/dev.pianote.com\/members\/courses\/ceative-covers\/231114\/introduction\/231384",
+    "like_count": 2,
+    "xp": "150",
+    "xp_bonus": "150",
+    "last_watch_position_in_seconds": 0
+  },
+  "next_lesson": {
+    "id": 231385,
+    "slug": "\"free-fallin'\"",
+    "type": "course-part",
+    "sort": 0,
+    "status": "published",
+    "language": "en-US",
+    "brand": "pianote",
+    "published_on": "2019-08-19 19:00:00",
+    "created_on": "2019-08-19 15:11:36",
+    "archived_on": null,
+    "parent_id": 231114,
+    "child_id": 231385,
+    "fields": [
+      {
+        "id": 293514,
+        "content_id": 231385,
+        "key": "title",
+        "value": "\"Free Fallin'\"",
+        "type": "string",
+        "position": 1
+      },
+      {
+        "id": 293522,
+        "content_id": 231385,
+        "key": "xp",
+        "value": "150",
+        "type": "integer",
+        "position": 1
+      },
+      {
+        "id": 293523,
+        "content_id": 231385,
+        "key": "video",
+        "value": {
+          "id": 231092,
+          "slug": "vimeo-video-353622180",
+          "type": "vimeo-video",
+          "sort": 0,
+          "status": "published",
+          "language": "en-US",
+          "brand": "pianote",
+          "published_on": "2019-08-13 18:00:41",
+          "created_on": "2019-08-13 18:00:41",
+          "archived_on": null,
+          "parent_id": null,
+          "child_id": null,
+          "fields": [
+            {
+              "id": 292854,
+              "content_id": 231092,
+              "key": "vimeo_video_id",
+              "value": "353622180",
+              "type": "string",
+              "position": 1
+            },
+            {
+              "id": 292855,
+              "content_id": 231092,
+              "key": "length_in_seconds",
+              "value": "741",
+              "type": "integer",
+              "position": 1
+            }
+          ],
+          "data": [],
+          "permissions": []
+        },
+        "type": "content",
+        "position": 1
+      }
+    ],
+    "data": [
+      {
+        "id": 103187,
+        "content_id": 231385,
+        "key": "thumbnail_url",
+        "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/231385-card-thumbnail-1566228192.jpg",
+        "position": 1
+      },
+      {
+        "id": 103188,
+        "content_id": 231385,
+        "key": "original_thumbnail_url",
+        "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/231385-card-thumbnail-maxres-1566228194.jpg",
+        "position": 1
+      },
+      {
+        "id": 103203,
+        "content_id": 231385,
+        "key": "description",
+        "value": "<p>Free Fallin in a classic song by Tom Petty. This song uses a very simple chord progression which makes it a perfect place to begin when it comes to making your own unique cover. Jordan explores inversions dynamics, and 9th chords as a way to add some unique flavour and energy to this piece. <\/p>",
+        "position": 1
+      },
+      {
+        "id": 103216,
+        "content_id": 231385,
+        "key": "resource_name",
+        "value": "PDF Sheet Music",
+        "position": 1
+      },
+      {
+        "id": 103217,
+        "content_id": 231385,
+        "key": "resource_url",
+        "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/231385-resource-1566241504.pdf",
+        "position": 1
+      }
+    ],
+    "permissions": [],
+    "child_ids": [
+      231385
+    ],
+    "position": 2,
+    "user_progress": {
+      "128762": []
+    },
+    "completed": false,
+    "started": false,
+    "progress_percent": 0,
+    "user_playlists": {
+      "128762": []
+    },
+    "is_added_to_primary_playlist": false,
+    "url": "https:\/\/dev.pianote.com\/members\/courses\/ceative-covers\/231114\/%22free-fallin%27%22\/231385",
+    "like_count": 2,
+    "resources": {
+      "1": {
+        "resource_name": "PDF Sheet Music",
+        "resource_url": "https:\/\/d1923uyy6spedc.cloudfront.net\/231385-resource-1566241504.pdf"
+      }
+    },
+    "xp": "150",
+    "xp_bonus": "150",
+    "last_watch_position_in_seconds": 0
+  },
+  "like_count": 0,
+  "xp": 1550,
+  "xp_bonus": "500"
+}

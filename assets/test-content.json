@@ -1,0 +1,238 @@
+{
+  "id": 227483,
+  "slug": "make-your-chord-progressions-more-exciting",
+  "type": "quick-tips",
+  "sort": 0,
+  "status": "published",
+  "language": "en-US",
+  "brand": "pianote",
+  "published_on": "2019-07-15 19:00:00",
+  "created_on": "2019-06-28 14:43:54",
+  "archived_on": null,
+  "parent_id": null,
+  "child_id": null,
+  "fields": [
+    {
+      "id": 283526,
+      "content_id": 227483,
+      "key": "title",
+      "value": "Make Your Chord Progressions More Exciting",
+      "type": "string",
+      "position": 1
+    },
+    {
+      "id": 283527,
+      "content_id": 227483,
+      "key": "difficulty",
+      "value": "2",
+      "type": "string",
+      "position": 1
+    },
+    {
+      "id": 284396,
+      "content_id": 227483,
+      "key": "tag",
+      "value": "exciting chords",
+      "type": "string",
+      "position": 1
+    },
+    {
+      "id": 284397,
+      "content_id": 227483,
+      "key": "tag",
+      "value": "unique chord progressions",
+      "type": "string",
+      "position": 2
+    },
+    {
+      "id": 284398,
+      "content_id": 227483,
+      "key": "tag",
+      "value": "chord substitutions",
+      "type": "string",
+      "position": 3
+    },
+    {
+      "id": 287811,
+      "content_id": 227483,
+      "key": "video",
+      "value": {
+        "id": 228721,
+        "slug": "vimeo-video-346925979",
+        "type": "vimeo-video",
+        "sort": 0,
+        "status": "published",
+        "language": "en-US",
+        "brand": "pianote",
+        "published_on": "2019-07-09 08:45:41",
+        "created_on": "2019-07-09 08:45:44",
+        "archived_on": null,
+        "parent_id": null,
+        "child_id": null,
+        "fields": [
+          {
+            "id": 287809,
+            "content_id": 228721,
+            "key": "vimeo_video_id",
+            "value": "346925979",
+            "type": "string",
+            "position": 1
+          },
+          {
+            "id": 287810,
+            "content_id": 228721,
+            "key": "length_in_seconds",
+            "value": "137",
+            "type": "string",
+            "position": 1
+          }
+        ],
+        "data": [],
+        "permissions": []
+      },
+      "type": "content",
+      "position": 1
+    },
+    {
+      "id": 283529,
+      "content_id": 227483,
+      "key": "instructor",
+      "value": {
+        "id": 196994,
+        "slug": "jordan-leibel",
+        "type": "instructor",
+        "sort": 0,
+        "status": "published",
+        "language": "en-US",
+        "brand": "pianote",
+        "published_on": "2018-02-28 17:01:11",
+        "created_on": "2018-02-28 17:01:11",
+        "archived_on": null,
+        "parent_id": null,
+        "child_id": null,
+        "fields": [
+          {
+            "id": 203219,
+            "content_id": 196994,
+            "key": "name",
+            "value": "Jordan Leibel",
+            "type": "string",
+            "position": 1
+          }
+        ],
+        "data": [
+          {
+            "id": 40003,
+            "content_id": 196994,
+            "key": "head_shot_picture_url",
+            "value": "https:\/\/d2vyvo0tyx8ig5.cloudfront.net\/instructors\/jordanleibel.png",
+            "position": 1
+          },
+          {
+            "id": 40004,
+            "content_id": 196994,
+            "key": "biography",
+            "value": "I've worked as a composer for film, commercial, and theatre projects as well as a session musician and producer for recording projects. And now, I'm super excited to teach you a thing or two through Pianote!",
+            "position": 1
+          }
+        ],
+        "permissions": []
+      },
+      "type": "content",
+      "position": 1
+    },
+
+    {
+      "id": 283529,
+      "content_id": 227484,
+      "key": "instructor",
+      "value": {
+        "id": 196994,
+        "slug": "jordan-leibel-2",
+        "type": "instructor",
+        "sort": 0,
+        "status": "published",
+        "language": "en-US",
+        "brand": "pianote",
+        "published_on": "2018-02-28 17:01:11",
+        "created_on": "2018-02-28 17:01:11",
+        "archived_on": null,
+        "parent_id": null,
+        "child_id": null,
+        "fields": [
+          {
+            "id": 203219,
+            "content_id": 196994,
+            "key": "name",
+            "value": "Jordan Leibel 2",
+            "type": "string",
+            "position": 1
+          }
+        ],
+        "data": [
+          {
+            "id": 40003,
+            "content_id": 196994,
+            "key": "head_shot_picture_url",
+            "value": "https:\/\/d2vyvo0tyx8ig5.cloudfront.net\/instructors\/jordanleibel.png",
+            "position": 1
+          },
+          {
+            "id": 40004,
+            "content_id": 196994,
+            "key": "biography",
+            "value": "I've worked as a composer for film, commercial, and theatre projects as well as a session musician and producer for recording projects. And now, I'm super excited to teach you a thing or two through Pianote!",
+            "position": 1
+          }
+        ],
+        "permissions": []
+      },
+      "type": "content",
+      "position": 1
+    }
+  ],
+  "data": [
+    {
+      "id": 98093,
+      "content_id": 227483,
+      "key": "description",
+      "value": "<p>Are you in a chord progression rut? This lesson will show you how to make your chord progressions more interesting by making different chord choices and using different voicings to create these chords!<\/p>",
+      "position": 1
+    },
+    {
+      "id": 101102,
+      "content_id": 227483,
+      "key": "thumbnail_url",
+      "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/227483-card-thumbnail-1562661868.jpg",
+      "position": 1
+    },
+    {
+      "id": 101103,
+      "content_id": 227483,
+      "key": "original_thumbnail_url",
+      "value": "https:\/\/d1923uyy6spedc.cloudfront.net\/227483-card-thumbnail-maxres-1562661873.jpg",
+      "position": 1
+    }
+  ],
+  "permissions": [],
+  "user_progress": {
+    "128762": []
+  },
+  "completed": false,
+  "started": false,
+  "progress_percent": 0,
+  "user_playlists": {
+    "128762": []
+  },
+  "is_added_to_primary_playlist": false,
+  "published_on_in_timezone": {
+    "date": "2019-07-15 12:00:00.000000",
+    "timezone_type": 3,
+    "timezone": "America\/Los_Angeles"
+  },
+  "url": "https:\/\/dev.pianote.com\/members\/quick-tips\/make-your-chord-progressions-more-exciting\/227483",
+  "like_count": 17,
+  "xp": 100,
+  "xp_bonus": 100,
+  "last_watch_position_in_seconds": 0
+}
