@@ -13,9 +13,7 @@
   "author": "Curtis <curtis@drumeo.com>",
   "license": "MIT",
   "private": false,
-  "dependencies": {
-    "luxon": "^1.17.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
@@ -26,7 +24,6 @@
     "esm": "^3.2.25",
     "jest": "^24.9.0",
     "jsdoc-to-markdown": "^5.0.0",
-    "nock": "^10.0.6",
     "prettier": "^1.18.2"
   }
 }
