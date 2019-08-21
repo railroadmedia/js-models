@@ -5,28 +5,28 @@ export class ContentModel {
      *
      * @param {Object} post - The post to bind to the class
      * */
-    constructor(post){
+    constructor(post) {
         this.post = post;
     }
 
     /**
      * @type {String|Number} The post database ID
      */
-    get id(){
+    get id() {
         return this.post.id;
     }
 
     /**
      * @type {String} The post slug
      */
-    get slug(){
+    get slug() {
         return this.post.slug;
     }
 
     /**
      * @type {String} The brand that the content belongs to
      */
-    get brand(){
+    get brand() {
         return this.post.brand;
     }
 
@@ -78,6 +78,7 @@ export class ContentModel {
     get isStarted() {
         return this.post.started === true;
     }
+
     set isStarted(value) {
         this.post.started = value;
     }
@@ -88,6 +89,7 @@ export class ContentModel {
     get isCompleted() {
         return this.post.completed === true;
     }
+
     set isCompleted(value) {
         this.post.completed = value;
     }
@@ -98,8 +100,9 @@ export class ContentModel {
     get isAddedToList() {
         return this.post.is_added_to_primary_playlist;
     }
+
     set isAddedToList(value) {
-         this.post.is_added_to_primary_playlist = value;
+        this.post.is_added_to_primary_playlist = value;
     }
 
     /**
@@ -108,7 +111,8 @@ export class ContentModel {
     get isLiked() {
         return this.post.is_liked === true;
     }
-    set isLiked(value){
+
+    set isLiked(value) {
         this.post.is_liked = value;
     }
 
@@ -118,6 +122,7 @@ export class ContentModel {
     get likeCount() {
         return this.post.like_count;
     }
+
     set likeCount(value) {
         this.post.like_count = value;
     }
@@ -129,7 +134,7 @@ export class ContentModel {
      * @returns {String} The value of the field
      */
     getField(key) {
-        const postField = this.post.fields.find(field => field.key === key);
+        const postField = this.post.fields.find((field) => field.key === key);
 
         return postField ? postField.value : 'TBD';
     }
@@ -141,9 +146,9 @@ export class ContentModel {
      * @returns {Array|String} An array of all the matching field values, returns a string 'TBD' if no values match
      */
     getFieldMulti(key) {
-        const postFields = this.post.fields.filter(field => field.key === key);
+        const postFields = this.post.fields.filter((field) => field.key === key);
 
-        return postFields.length ? postFields.map(field => field.value) : 'TBD';
+        return postFields.length ? postFields.map((field) => field.value) : 'TBD';
     }
 
     /**
@@ -153,7 +158,7 @@ export class ContentModel {
      * @returns {String} The value of the field
      */
     getData(key) {
-        const postData = this.post.data.find(data => data.key === key);
+        const postData = this.post.data.find((data) => data.key === key);
 
         return postData ? postData.value : 'TBD';
     }
@@ -166,15 +171,14 @@ export class ContentModel {
     getInstructors() {
         const instructors = this.getFieldMulti('instructor');
 
-        if(instructors.length){
+        if (instructors.length) {
             return instructors
                 // Get all the instructor fields
-                .map(instructor => instructor.fields
+                .map((instructor) => instructor.fields
                     // Find only the name field
-                    .find(field => field.key === 'name')
-                )
+                    .find((field) => field.key === 'name'))
                 // Map the field values
-                .map(field => field.value)
+                .map((field) => field.value)
                 // Join them with a comma
                 .join(', ');
         }
@@ -187,7 +191,7 @@ export class ContentModel {
      *
      * @returns {String} The difficulty of the post
      */
-    getDifficulty(){
+    getDifficulty() {
         const difficulty = this.getField('difficulty');
 
         return ContentModel.mapDifficulty(difficulty);
@@ -204,7 +208,7 @@ export class ContentModel {
 
         if (video !== 'TBD') {
             let duration = 0;
-            const videoLength = video.fields.find(field => field.key === 'length_in_seconds');
+            const videoLength = video.fields.find((field) => field.key === 'length_in_seconds');
             const coefficients = {
                 secs: 1,
                 mins: 60,
