@@ -1,6 +1,8 @@
 # js-models - @musora/services
 Data models for all Musora back-end services
 
+[![Build Status](https://travis-ci.com/railroadmedia/js-models.png?branch=master)](https://travis-ci.com/railroadmedia/js-models)
+
 ## Installation
 
 _Note that the package is not officially published yet so these commands will not work._
