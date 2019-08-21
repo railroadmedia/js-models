@@ -196,7 +196,7 @@ Parse the post duration in seconds, minutes, or hours
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| format | <code>String</code> | <code>mins</code> | = 'mins' the format to parse the duration as. Accepted Values: `secs`, `mins`, `hours` |
+| format | <code>String</code> | <code>mins</code> | = 'mins' - the format to parse the duration as. Accepted Values: `secs`, `mins`, `hours` |
 
 <a name="ContentModel+getThumbnail"></a>
 
