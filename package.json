@@ -7,17 +7,18 @@
   "scripts": {
     "test": "jest",
     "docs": "./document.sh",
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
     "manual-test": "node -r esm manual_test.js"
   },
   "repository": "https://github.com/railroadmedia/js-models.git",
   "author": "Curtis <curtis@drumeo.com>",
   "license": "MIT",
   "private": false,
-  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-jest": "^24.9.0",
+    "coveralls": "^3.0.6",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
@@ -25,5 +26,8 @@
     "jest": "^24.9.0",
     "jsdoc-to-markdown": "^5.0.0",
     "prettier": "^1.18.2"
+  },
+  "jest": {
+    "coverageDirectory": "tests/coverage"
   }
 }
