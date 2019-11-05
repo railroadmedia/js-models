@@ -4,6 +4,7 @@ import * as testContentWithChildren from "../assets/test-content-with-children.j
 
 describe('ContentModel', () => {
     const content = new ContentModel(testContent);
+    const emptyContent = new ContentModel({});
     const contentWithChildren = new ContentModel(testContentWithChildren);
 
     it('constructs', () => {
@@ -36,12 +37,20 @@ describe('ContentModel', () => {
             expect(content).toHaveProperty('publishedOn');
             expect(content.publishedOn).toBe('2019-07-15 19:00:00');
         });
+
+        it('returns TBD if the value does not exist', () => {
+            expect(emptyContent.publishedOn).toBe('TBD');
+        });
     });
 
     describe('type', () => {
         it('exists and is equal to the test data', () => {
             expect(content).toHaveProperty('type');
             expect(content.type).toBe('quick-tips');
+        });
+
+        it('returns TBD if the value does not exist', () => {
+            expect(emptyContent.type).toBe('TBD');
         });
     });
 
@@ -50,12 +59,20 @@ describe('ContentModel', () => {
             expect(content).toHaveProperty('status');
             expect(content.status).toBe('published');
         });
+
+        it('returns TBD if the value does not exist', () => {
+            expect(emptyContent.status).toBe('TBD');
+        });
     });
 
     describe('xp', () => {
         it('exists and is equal to the test data', () => {
             expect(content).toHaveProperty('xp');
             expect(content.xp).toBe(100);
+        });
+
+        it('returns 0 if the value does not exist', () => {
+            expect(emptyContent.xp).toBe(0);
         });
     });
 
@@ -64,12 +81,20 @@ describe('ContentModel', () => {
             expect(content).toHaveProperty('bonusXp');
             expect(content.bonusXp).toBe(100);
         });
+
+        it('returns 0 if the value does not exist', () => {
+            expect(emptyContent.bonusXp).toBe(0);
+        });
     });
 
     describe('webUrl', () => {
         it('exists and is equal to the test data', () => {
             expect(content).toHaveProperty('webUrl');
             expect(content.webUrl).toBe('https://dev.pianote.com/members/quick-tips/make-your-chord-progressions-more-exciting/227483');
+        });
+
+        it('returns TBD if the value does not exist', () => {
+            expect(emptyContent.webUrl).toBe('TBD');
         });
     });
 
@@ -250,5 +275,37 @@ describe('ContentModel', () => {
             expect(children).toBeDefined();
             expect(children).toBe('TBD');
         })
+    });
+
+    describe('mapDifficulty', () => {
+        it('returns beginner - for any number less or equal to 3', () => {
+            const difficulty = ContentModel.mapDifficulty(2);
+
+            expect(difficulty).toBe('beginner 2');
+        });
+
+        it('returns intermediate - for any number less or equal to 6 and greater than 3', () => {
+            const difficulty = ContentModel.mapDifficulty(5);
+
+            expect(difficulty).toBe('intermediate 5');
+        });
+
+        it('returns advanced - for any number greater than 6', () => {
+            const difficulty = ContentModel.mapDifficulty(8);
+
+            expect(difficulty).toBe('advanced 8');
+        });
+
+        it('returns the input for any truthy value that is not a number', () => {
+            const difficulty = ContentModel.mapDifficulty('easy');
+
+            expect(difficulty).toBe('easy');
+        });
+
+        it('returns TBD if the input does not exist', () => {
+            const difficulty = ContentModel.mapDifficulty(undefined);
+
+            expect(difficulty).toBe('TBD');
+        });
     });
 });

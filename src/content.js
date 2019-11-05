@@ -41,14 +41,14 @@ export class ContentModel {
      * @type {String} The content type of the post
      */
     get type() {
-        return this.post.type;
+        return this.post.type || 'TBD';
     }
 
     /**
      * @type {String} The published status of the content (draft, scheduled, published, archived, deleted)
      */
     get status() {
-        return this.post.status;
+        return this.post.status || 'TBD';
     }
 
     /**
@@ -69,7 +69,7 @@ export class ContentModel {
      * @type {String} The URL to the post on the website
      */
     get webUrl() {
-        return this.post.url;
+        return this.post.url || 'TBD';
     }
 
     /**
