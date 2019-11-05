@@ -1,6 +1,6 @@
 {
   "name": "@musora/models",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Data models for all Musora back-end services",
   "main": "index.js",
   "type": "module",
