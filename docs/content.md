@@ -17,13 +17,13 @@
         * [.bonusXp](#ContentModel+bonusXp) : <code>Number</code> \| <code>String</code>
         * [.webUrl](#ContentModel+webUrl) : <code>String</code>
         * [.isStarted](#ContentModel+isStarted) : <code>Boolean</code>
+        * [.isCompleted](#ContentModel+isCompleted) : <code>Boolean</code>
         * [.isAddedToList](#ContentModel+isAddedToList) : <code>Boolean</code>
         * [.isLiked](#ContentModel+isLiked) : <code>Boolean</code>
         * [.likeCount](#ContentModel+likeCount) : <code>String</code> \| <code>Number</code>
         * [.getField(key)](#ContentModel+getField) ⇒ <code>String</code>
-        * [.getFieldMulti(key)](#ContentModel+getFieldMulti) ⇒ <code>Array</code>
+        * [.getFieldMulti(key)](#ContentModel+getFieldMulti) ⇒ <code>Array</code> \| <code>String</code>
         * [.getData(key)](#ContentModel+getData) ⇒ <code>String</code>
-        * [.getDataMulti(key)](#ContentModel+getDataMulti) ⇒ <code>Array</code>
         * [.getInstructors()](#ContentModel+getInstructors) ⇒ <code>String</code>
         * [.getDifficulty()](#ContentModel+getDifficulty) ⇒ <code>String</code>
         * [.getDuration(format)](#ContentModel+getDuration) ⇒ <code>String</code>
@@ -106,6 +106,12 @@ The URL to the post on the website
 Whether or not the current user has started the content
 
 **Kind**: instance property of [<code>ContentModel</code>](#ContentModel)  
+<a name="ContentModel+isCompleted"></a>
+
+### contentModel.isCompleted : <code>Boolean</code>
+Whether or not the current user has completed the content
+
+**Kind**: instance property of [<code>ContentModel</code>](#ContentModel)  
 <a name="ContentModel+isAddedToList"></a>
 
 ### contentModel.isAddedToList : <code>Boolean</code>
@@ -138,11 +144,11 @@ Get a content posts field by key
 
 <a name="ContentModel+getFieldMulti"></a>
 
-### contentModel.getFieldMulti(key) ⇒ <code>Array</code>
+### contentModel.getFieldMulti(key) ⇒ <code>Array</code> \| <code>String</code>
 Get all of a contents post fields by key
 
 **Kind**: instance method of [<code>ContentModel</code>](#ContentModel)  
-**Returns**: <code>Array</code> - An array of all the matching field values  
+**Returns**: <code>Array</code> \| <code>String</code> - An array of all the matching field values, returns a string 'TBD' if no values match  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -155,18 +161,6 @@ Get a content posts field by key
 
 **Kind**: instance method of [<code>ContentModel</code>](#ContentModel)  
 **Returns**: <code>String</code> - The value of the field  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| key | <code>Object</code> | The key of the property you wish to get |
-
-<a name="ContentModel+getDataMulti"></a>
-
-### contentModel.getDataMulti(key) ⇒ <code>Array</code>
-Get all of a contents post fields by key
-
-**Kind**: instance method of [<code>ContentModel</code>](#ContentModel)  
-**Returns**: <code>Array</code> - An array of all the matching field values  
 
 | Param | Type | Description |
 | --- | --- | --- |
