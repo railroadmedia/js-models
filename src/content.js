@@ -143,12 +143,12 @@ export class ContentModel {
      * Get all of a contents post fields by key
      *
      * @param {Object} key - The key of the property you wish to get
-     * @returns {Array|String} An array of all the matching field values, returns a string 'TBD' if no values match
+     * @returns {Array} An array of all the matching field values
      */
     getFieldMulti(key) {
         const postFields = this.post.fields.filter((field) => field.key === key);
 
-        return postFields.length ? postFields.map((field) => field.value) : 'TBD';
+        return postFields.length ? postFields.map((field) => field.value) : [];
     }
 
     /**

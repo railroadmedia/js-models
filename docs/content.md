@@ -22,7 +22,7 @@
         * [.isLiked](#ContentModel+isLiked) : <code>Boolean</code>
         * [.likeCount](#ContentModel+likeCount) : <code>String</code> \| <code>Number</code>
         * [.getField(key)](#ContentModel+getField) ⇒ <code>String</code>
-        * [.getFieldMulti(key)](#ContentModel+getFieldMulti) ⇒ <code>Array</code> \| <code>String</code>
+        * [.getFieldMulti(key)](#ContentModel+getFieldMulti) ⇒ <code>Array</code>
         * [.getData(key)](#ContentModel+getData) ⇒ <code>String</code>
         * [.getInstructors()](#ContentModel+getInstructors) ⇒ <code>String</code>
         * [.getDifficulty()](#ContentModel+getDifficulty) ⇒ <code>String</code>
@@ -144,11 +144,11 @@ Get a content posts field by key
 
 <a name="ContentModel+getFieldMulti"></a>
 
-### contentModel.getFieldMulti(key) ⇒ <code>Array</code> \| <code>String</code>
+### contentModel.getFieldMulti(key) ⇒ <code>Array</code>
 Get all of a contents post fields by key
 
 **Kind**: instance method of [<code>ContentModel</code>](#ContentModel)  
-**Returns**: <code>Array</code> \| <code>String</code> - An array of all the matching field values, returns a string 'TBD' if no values match  
+**Returns**: <code>Array</code> - An array of all the matching field values  
 
 | Param | Type | Description |
 | --- | --- | --- |
