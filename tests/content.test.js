@@ -187,11 +187,11 @@ describe('ContentModel', () => {
             ]);
         });
 
-        it('returns \'TBD\' if the value doesn\'t exist', () => {
+        it('returns an empty array if the value doesn\'t exist', () => {
             const fields = content.getFieldMulti('DOES_NOT_EXIST');
 
             expect(fields).toBeDefined();
-            expect(fields).toBe('TBD');
+            expect(fields).toMatchObject([]);
         });
     });
 
